@@ -49,7 +49,14 @@ Il modello è composto da:
 
 ## 🖼️ Risultati visivi
 
+### MNIST - σ = 0.392 - PSNR = 26.47dB
+![](results/26,47dB-0,392.png)
 
+### CIFAR10 - σ = 0.392 - PSNR = 24.32dB
+![](results/24,32dB-0,392-Cifar10.png)
+
+### Altri Risultati
+I risultati relativi alle altre sperimentazioni, sono visualizzabili nel repo (results folder)
 
 ---
 
@@ -58,11 +65,14 @@ Il modello è composto da:
 | Dataset   | Sigma (σ) | PSNR     | Epochs |
 |-----------|------------|----------|--------|
 | MNIST     | 0.1        | 33.66 dB | 118    |
-| MNIST     | 0.25       | 29.66 dB | 256    |
-| MNIST     | 0.5        | 26.47 dB | 175    |
+| MNIST     | 0.196      | 29.66 dB | 256    |
+| MNIST     | 0.392      | 26.47 dB | 175    |
 | CIFAR-10  | 0.1        | 28.44 dB | 169    |
-| CIFAR-10  | 0.25       | 26.63 dB | 200    |
-| CIFAR-10  | 0.5        | 24.26 dB | 129    |
+| CIFAR-10  | 0.196      | 26.63 dB | 200    |
+| CIFAR-10  | 0.392      | 24.32 dB | 129    |
+
+Sigma rappresenta l'intensità di rumore applicato alle immagini. Il rumore in questione è bianco additivo, ovvero aggiunge un noise realistico (no pattern o strutture spaziali particolari), aggiungendo il valore di ogni pixel ad un epsilon campionato da una distribuzione normale standard centrata nello zero e con varianza uguale proprio al sigma.
+I valori 0.196 e 0.392 sono equivalenti ad un sigma, rispettivamente, uguale a 25 e 50, calcolato come: (sigma / 256) * 2, in modo da considerare che le immagini sono normalizzate in un range di 2 ([-1, 1])
 
 > ⚠️ I valori sono mediati su 10.000 immagini test, calcolati tramite `mean PSNR`
 
@@ -74,27 +84,23 @@ Il modello è composto da:
 .
 ├── mnist_denoising.R
 ├── cifar10_denoising.R
-├── utils/
-│   ├── preprocessing.R
-│   └── metrics.R
 ├── results/
-│   ├── plots/
-│   └── samples/
+│   ├── ...
 ├── LICENSE
 └── README.md
 
 ```
 
-> Per questo progetto è stato elaborato anche un report/tesina, con presentazione. Entrambi omessi.
+> Per questo progetto è stato elaborato anche un report/tesina, con presentazione, oltre ad una serie di analisi statistiche aggiuntive (PCA, test statistici, ...) omessi in questo repo.
 
 ---
 
-### Setup hardware e ambiente
+### Setup hardware e ambiente di sviluppo
 
 - GPU: **NVIDIA RTX 4070 Super**
 - CPU: Intel Core i5 14600KF
 - Training time MNIST: ~8ms/step
-- Others: CUDA e CUdnn
+- Others: CUDA e cuDNN
 
 ---
 
