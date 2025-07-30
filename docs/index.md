@@ -51,6 +51,13 @@
 
 ---
 
+## Grafico Sintetico / Syntetic Plot
+
+<img src="results/PlotSynteticResults.png" width="700"/>
+
+---
+
+
 ## 🔗 Repository GitHub
 
 👉 [🇮🇹 Vai al repository](https://github.com/gabrielelobosco/denoising-autoencoder-r)  
