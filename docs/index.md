@@ -24,11 +24,11 @@
 
 ## 🖼️ Risultati Visivi / Visual Results
 
-### MNIST - σ = 0.392 - PSNR = 26.47 dB  
-<img src="results/mnist-denoised.png" width="400"/>
+### MNIST - σ = 0.392 - PSNR = 26.47 dB
+<img src="results/26,47dB-0,392.png" width="400"/>
 
-### CIFAR-10 - σ = 0.392 - PSNR = 24.32 dB  
-<img src="results/cifar10-denoised.png" width="400"/>
+### CIFAR-10 - σ = 0.392 - PSNR = 24.32 dB
+<img src="results/24,32dB-0,392-Cifar10.png" width="400"/>
 
 📁 *Altri risultati sono disponibili nella cartella `results/` del repository.*  
 📁 *Other results are available in the `results/` folder of the repository.*
